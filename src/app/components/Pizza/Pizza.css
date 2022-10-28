@@ -1,0 +1,14 @@
+
+.pizza-box {
+    margin: 0 auto;
+}
+
+.pizza-img {
+    
+}
+
+
+.price-box {
+    display: flex;
+    justify-content: space-between;
+}

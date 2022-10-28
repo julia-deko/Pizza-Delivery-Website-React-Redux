@@ -1,9 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
+import { PizzaList } from './app/components/PizzaList/PizzaList';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
+      <PizzaList pizzas={props.state} dispatch={props.dispatch} />
     </div>
   );
 }
