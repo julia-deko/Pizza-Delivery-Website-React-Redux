@@ -1,9 +1,7 @@
 import './Pizza.css';
 import Image from '../../../images/pizza.jpg'
 
-export function Pizza({ name, price, description, dispatch }) {
-
-
+export function Pizza({ name, price, description }) {
     return (
         <div className="pizza-box">
             <div className="pizza-img">
@@ -11,8 +9,8 @@ export function Pizza({ name, price, description, dispatch }) {
             </div>
             <h1>{name}</h1>
             <div className="price-box">
-                <p>Price {price}</p>
-                <button>Add</button>
+                <p className='price'>{price}$</p>
+                <button>Add to cart</button>
             </div>
             <p>{description}</p>
         </div>

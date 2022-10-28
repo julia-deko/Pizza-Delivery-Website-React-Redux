@@ -19,3 +19,4 @@ export const pizzaListReducer = ( pizzas = initialPizzaList, action ) => {
         }
     }
 };
+
