@@ -1,0 +1,16 @@
+.header {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff5200;
+    color: white;
+    padding: 0 200px;
+    text-align: center;
+}
+
+nav a {
+    margin-right: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
