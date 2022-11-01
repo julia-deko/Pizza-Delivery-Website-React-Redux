@@ -1,13 +1,13 @@
-import { Pizza } from "../Pizza/Pizza";
+import { Item } from "../Item/Item";
 import { useEffect } from "react";
 import { loadData } from "../../features/PizzaListSlice";
-import { pizzas as PizzaData } from "../../PizzaArr";
-import './PizzaList.css';
+import { pizzas as PizzaData } from "../../Items";
+import '../Item/ItemList.css';
 import { useSelector, useDispatch } from "react-redux";
 
 export function PizzaList() {
 
-    const pizzas = useSelector(state => state);
+    const pizzas = useSelector(state => state.pizzaList);
     const dispatch = useDispatch();
 
     const onMount = () => {
@@ -20,7 +20,7 @@ export function PizzaList() {
             <div>
                 {
                     pizzas.map( pizza => {
-                        return <Pizza 
+                        return <Item 
                                 key={pizza.id} 
                                 name={pizza.name}
                                 price={pizza.price} 

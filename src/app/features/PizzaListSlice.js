@@ -1,4 +1,4 @@
-import { pizzas } from "../PizzaArr";
+import { pizzas } from "../Items";
 
 export const loadData = (data) => {
     return {

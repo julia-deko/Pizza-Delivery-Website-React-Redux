@@ -1,0 +1,9 @@
+div {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    text-align: center;
+}
