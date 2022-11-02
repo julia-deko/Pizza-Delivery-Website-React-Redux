@@ -1,21 +1,15 @@
-import { drinks } from "../Items";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const loadData = (data) => {
-    return {
-        type: 'drinks/loadData',
-        payload: data
-    };
-};
-
-const initialDrinksList = [];
-
-export const drinksListReducer = ( drinks = initialDrinksList, action ) => {
-    switch(action.type) {
-        case 'drinks/loadData': {
+const drinksSlice = createSlice({
+    name: 'drinks',
+    initialState: [],
+    reducers: {
+        loadData: (state, action) => {
             return action.payload;
         }
-        default: {
-            return drinks;
-        }
     }
-};
+});
+
+export const { loadData } = drinksSlice.actions;
+
+export const drinksListReducer =  drinksSlice.reducer;

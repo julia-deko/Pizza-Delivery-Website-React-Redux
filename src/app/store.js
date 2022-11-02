@@ -1,10 +1,13 @@
-import { createStore, combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 import { pizzaListReducer } from './features/PizzaListSlice';
 import { drinksListReducer } from './features/DrinksListSlice';
+import { configureStore } from '@reduxjs/toolkit';
 
-export const store = createStore(combineReducers(
+export const store = configureStore(
     {
-        pizzaList: pizzaListReducer,
-        drinksList: drinksListReducer
+        reducer: {
+            pizzaList: pizzaListReducer,
+            drinksList: drinksListReducer
+        }
     }
-));
+);

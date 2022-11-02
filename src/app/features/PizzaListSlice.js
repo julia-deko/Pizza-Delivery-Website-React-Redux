@@ -1,22 +1,16 @@
-import { pizzas } from "../Items";
+import { createSlice } from "@reduxjs/toolkit";
 
-export const loadData = (data) => {
-    return {
-        type: 'pizza/loadData',
-        payload: data
-    };
-};
-
-const initialPizzaList = [];
-
-export const pizzaListReducer = ( pizzas = initialPizzaList, action ) => {
-    switch(action.type) {
-        case 'pizza/loadData': {
+const pizzaSlice = createSlice({
+    name: 'pizza',
+    initialState: [],
+    reducers: {
+        loadData: (state, action) => {
             return action.payload;
         }
-        default: {
-            return pizzas;
-        }
     }
-};
+});
 
+
+export const { loadData } = pizzaSlice.actions;
+
+export const pizzaListReducer = pizzaSlice.reducer;
