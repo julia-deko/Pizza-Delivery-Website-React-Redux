@@ -67,7 +67,7 @@ export const drinks = [
         id: 10,
         name: 'Pina colada',
         price: 15,
-        description: 'creamy coconut milk, pineapple, lime juice'
+        description: 'creamy coconut milk, lime juice'
     },
     {
         id: 11,
