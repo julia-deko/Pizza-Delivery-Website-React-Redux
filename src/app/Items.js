@@ -76,3 +76,31 @@ export const drinks = [
         description: 'milk, vanilla'
     }
 ];
+
+
+export const desserts = [
+    {
+        id: 12,
+        name: 'Brownies',
+        price: 7,
+        description: 'chocolate, flour, butter'
+    },
+    {
+        id: 13,
+        name: 'Tiramisu',
+        price: 11,
+        description: 'mascarpon, savoiardi, coffee'
+    },
+    {
+        id: 14,
+        name: 'Cheesecake',
+        price: 8,
+        description: 'flour, vanilla, sugar'
+    },
+    {
+        id: 15,
+        name: 'Pumpkin Pie',
+        price: 8,
+        description: 'pumpkin, cinnamon, ginger'
+    }
+];

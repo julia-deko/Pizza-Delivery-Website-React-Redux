@@ -6,7 +6,6 @@ export function Header() {
             <div className="logo"></div>
             <nav>
                 <a>Pizza</a>
-                <a>Sides</a>
                 <a>Desserts</a>
                 <a>Drinks</a>
             </nav>
