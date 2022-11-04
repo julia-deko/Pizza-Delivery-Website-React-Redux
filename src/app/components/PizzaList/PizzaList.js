@@ -4,6 +4,7 @@ import { loadData } from "../../features/PizzaListSlice";
 import { pizzas as PizzaData } from "../../Items";
 import '../Item/ItemList.css';
 import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../../features/CartSlice";
 
 export function PizzaList() {
 
@@ -15,6 +16,10 @@ export function PizzaList() {
       };
       useEffect(onMount, []);
 
+    const onAddHandler = (item) => {
+        dispatch(addItem(item));
+    }
+
     return (
         <div className="container">
             <div>
@@ -25,6 +30,7 @@ export function PizzaList() {
                                 name={pizza.name}
                                 price={pizza.price} 
                                 description={pizza.description}
+                                onAddHandler={() => {onAddHandler(pizza)}}
                             />
                     })
                 }

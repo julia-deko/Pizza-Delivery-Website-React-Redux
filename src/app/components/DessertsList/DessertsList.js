@@ -3,6 +3,7 @@ import { loadData } from '../../features/DessertsListSlice';
 import { desserts as DessertsData } from '../../Items';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { addItem } from '../../features/CartSlice';
 
 
 
@@ -16,6 +17,10 @@ export function DessertsList() {
       };
       useEffect(onMount, []);
 
+    const onAddHandler = (item) => {
+        dispatch(addItem(item));
+    }
+
     return (
         <div className="container">
             <div>
@@ -26,6 +31,7 @@ export function DessertsList() {
                                 name={dessert.name}
                                 price={dessert.price} 
                                 description={dessert.description}
+                                onAddHandler={() => {onAddHandler(dessert)}}
                             />
                     })
                 }
