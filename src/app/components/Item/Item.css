@@ -20,7 +20,15 @@ button {
     color: #ff5200;
     font-size: 20px;
     border-width: 0;
+    cursor: pointer;
 }
+
+button:hover {
+    background-color: #11EC01;
+    color: white;
+}
+
+
 
 .pizza-box {
     margin: 20px;
