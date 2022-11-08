@@ -4,7 +4,22 @@ div {
     text-align: center;
 }
 
+.cart {
+    width: 100%;
+}
+
 .container {
     margin: 0 auto;
     width: 100%;
+}
+
+.cartList {
+    width: 80%;
+}
+
+.cartItem {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }

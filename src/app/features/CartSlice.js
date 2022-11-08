@@ -5,10 +5,14 @@ const cartSlice = createSlice({
     name: 'cart',
     initialState: [],
     reducers: {
-        displayCart: (state, action) => {
-            return action.payload;
-        },
         addItem: (state, action) => {
+            // const item = state.find(i => i.id === action.payload.id);
+            // if(item) {
+            //     item.count++;
+            // } else {
+            //     state.push({...action.payload, count: 1});
+            // }
+
             state.push(action.payload);
         },
         removeItem: (state, action) => {
@@ -17,5 +21,5 @@ const cartSlice = createSlice({
     }
 });
 
-export const { displayCart, addItem, removeItem } = cartSlice.actions;
+export const { addItem, removeItem } = cartSlice.actions;
 export const cartSliceReducer = cartSlice.reducer;
