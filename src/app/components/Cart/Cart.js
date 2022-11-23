@@ -2,6 +2,7 @@ import { useSelector, useDispatch } from "react-redux"
 import { addItem, removeItem } from "../../features/CartSlice";
 import { useMemo } from "react";
 import { CartItem } from "../CartItem/CartItem";
+import { Link } from "react-router-dom";
 
 export function Cart() {
 
@@ -27,6 +28,10 @@ export function Cart() {
                         return <CartItem item={item} onRemoveHandler={onRemoveHandler} onAddHandler={onAddHandler} />
                     } )
                 }
+            </div>
+            <br />
+            <div>
+                <Link to="/order"><button>Order</button></Link>
             </div>
         </div>
     )

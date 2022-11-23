@@ -23,3 +23,9 @@ div {
     align-items: center;
     justify-content: space-between;
 }
+
+
+.form-section div {
+    display: block;
+    margin: 20px;
+}
