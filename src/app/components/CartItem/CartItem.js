@@ -1,6 +1,6 @@
 
 
-export function CartItem ({item, onRemoveHandler}) {
+export function CartItem ({item, onRemoveHandler, onAddHandler}) {
 
     return (
         <div className="cartItem">
@@ -11,7 +11,10 @@ export function CartItem ({item, onRemoveHandler}) {
                 <h1>Quantity: { item.count }</h1>
             </div>
             <div>
-                <button onClick={()=>{onRemoveHandler(item)}}>-</button>
+                <button onClick={() => {onAddHandler(item)}}>+</button>
+            </div>
+            <div>
+                <button onClick={() => {onRemoveHandler(item)}}>-</button>
             </div>
             <div>
                 <h1>{item.price}$</h1>

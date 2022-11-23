@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from "react-redux"
-import { removeItem } from "../../features/CartSlice";
+import { addItem, removeItem } from "../../features/CartSlice";
 import { useMemo } from "react";
 import { CartItem } from "../CartItem/CartItem";
 
@@ -13,6 +13,10 @@ export function Cart() {
         dispatch(removeItem(item));
     }
 
+    const onAddHandler = (item) => {
+        dispatch(addItem(item));
+    }
+
     return (
         <div className="cart">
             <h1>{cart.length === 0 ? 'Your cart is empty' : 'Your Order'}</h1>
@@ -20,7 +24,7 @@ export function Cart() {
             <div className="cartList">
                 {
                     cart.map(item => {
-                        return <CartItem item={item} onRemoveHandler={onRemoveHandler} />
+                        return <CartItem item={item} onRemoveHandler={onRemoveHandler} onAddHandler={onAddHandler} />
                     } )
                 }
             </div>
