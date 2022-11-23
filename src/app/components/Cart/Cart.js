@@ -8,7 +8,7 @@ export function Cart() {
 
     const cart = useSelector(state => state.cart);
     const dispatch = useDispatch();
-    const sum = useMemo(() => cart.reduce((sum, item) => sum + item.price, 0), [cart]);
+    const sum = useMemo(() => cart.reduce((sum, item) => sum + item.price*item.count, 0), [cart]);
 
     const onRemoveHandler = (item) => {
         dispatch(removeItem(item));
