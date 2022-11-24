@@ -1,4 +1,4 @@
-
+import { CountButtons } from '../CountButtons/CountButtons';
 
 export function CartItem ({item, onRemoveHandler, onAddHandler}) {
 
@@ -7,15 +7,7 @@ export function CartItem ({item, onRemoveHandler, onAddHandler}) {
             <div>
                 <h1>{item.name}</h1>
             </div>
-            <div>
-                <h1>Quantity: { item.count }</h1>
-            </div>
-            <div>
-                <button onClick={() => {onAddHandler(item)}}>+</button>
-            </div>
-            <div>
-                <button onClick={() => {onRemoveHandler(item)}}>-</button>
-            </div>
+            <CountButtons count={item.count} onAddHandler={onAddHandler} onRemoveHandler={onRemoveHandler} item={item} />
             <div>
                 <h1>{item.price*item.count}$</h1>
             </div>

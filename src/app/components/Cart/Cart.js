@@ -31,7 +31,7 @@ export function Cart() {
             </div>
             <br />
             <div>
-                <Link to="/order"><button>Order</button></Link>
+                {cart.length === 0 ? '' : <Link to="/order"><button>Order</button></Link> }
             </div>
         </div>
     )

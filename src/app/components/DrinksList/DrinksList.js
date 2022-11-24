@@ -3,7 +3,7 @@ import { loadData } from '../../features/DrinksListSlice';
 import { drinks as DrinksData } from '../../Items';
 import { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { addItem } from '../../features/CartSlice';
+import { addItem, removeItem } from '../../features/CartSlice';
 
 
 export function DrinkList() {
@@ -21,6 +21,10 @@ export function DrinkList() {
         dispatch(addItem(item));
     }
 
+    const onRemoveHandler = (item) => {
+        dispatch(removeItem(item));
+    }
+
     return (
         <div className="container">
             <div>
@@ -32,6 +36,7 @@ export function DrinkList() {
                                 price={drink.price} 
                                 description={drink.description}
                                 onAddHandler={() => {onAddHandler(drink)}}
+                                onRemoveHandler={() => {onRemoveHandler(drink)}}
                             />
                     })
                 }
